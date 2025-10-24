@@ -109,10 +109,10 @@ const int8_t ZX_PDF417_TEXT_PUNCTUATION_RAW[] = {
   10, 45, 46, 36, 47, 34, 124, 42, 40, 41, 63, 123, 125, 39, 0};
 
 const int ZX_PDF417_MIXED_TABLE_LEN = 128;
-unichar ZX_PDF417_MIXED_TABLE[ZX_PDF417_MIXED_TABLE_LEN];
+unichar ZX_PDF417_MIXED_TABLE[128];
 
 const int ZX_PDF417_PUNCTUATION_LEN = 128;
-unichar ZX_PDF417_PUNCTUATION[ZX_PDF417_PUNCTUATION_LEN];
+unichar ZX_PDF417_PUNCTUATION[128];
 
 const NSStringEncoding ZX_PDF417_DEFAULT_ENCODING = NSISOLatin1StringEncoding;
 
@@ -364,7 +364,7 @@ const NSStringEncoding ZX_PDF417_DEFAULT_ENCODING = NSISOLatin1StringEncoding;
   // Encode sixpacks
   if (count >= 6) {
     const int charsLen = 5;
-    unichar chars[charsLen];
+    unichar chars[5];
     memset(chars, 0, charsLen * sizeof(unichar));
     while ((startpos + count - idx) >= 6) {
       long long t = 0;

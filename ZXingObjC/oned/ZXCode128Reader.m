@@ -25,7 +25,7 @@
 #import "ZXResultPoint.h"
 
 const int ZX_CODE128_CODE_PATTERNS_LEN = 107;
-const int ZX_CODE128_CODE_PATTERNS[ZX_CODE128_CODE_PATTERNS_LEN][7] = {
+const int ZX_CODE128_CODE_PATTERNS[107][7] = {
   {2, 1, 2, 2, 2, 2}, // 0
   {2, 2, 2, 1, 2, 2},
   {2, 2, 2, 2, 2, 1},

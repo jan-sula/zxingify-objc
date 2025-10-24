@@ -74,7 +74,7 @@ const int ZX_AZTEC_LATCH_TABLE[][5] = {
 // in that mode.  An entry of 0 indicates no mapping exists.
 const int ZX_AZTEC_CHAR_MAP_HEIGHT = 5;
 const int ZX_AZTEC_CHAR_MAP_WIDTH = 256;
-static int ZX_AZTEC_CHAR_MAP[ZX_AZTEC_CHAR_MAP_HEIGHT][ZX_AZTEC_CHAR_MAP_WIDTH];
+static int ZX_AZTEC_CHAR_MAP[5][256];
 
 // A map showing the available shift codes.  (The shifts to BINARY are not
 // shown
