@@ -81,7 +81,7 @@
                                                   newBytesPerRow,
                                                   colorSpace,
                                                   kCGBitmapByteOrder32Little|
-                                                  kCGImageAlphaNoneSkipFirst);
+                                                  (CGBitmapInfo)kCGImageAlphaNoneSkipFirst);
   CGColorSpaceRelease(colorSpace);
   
   CGImageRef result = CGBitmapContextCreateImage(newContext);
@@ -203,7 +203,7 @@
   }
   
   CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-  CGContextRef context = CGBitmapContextCreate(NULL, selfWidth, selfHeight, 8, selfWidth * 4, colorSpace, kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedLast);
+  CGContextRef context = CGBitmapContextCreate(NULL, selfWidth, selfHeight, 8, selfWidth * 4, colorSpace, kCGBitmapByteOrder32Little | (CGBitmapInfo)kCGImageAlphaPremultipliedLast);
   CGColorSpaceRelease(colorSpace);
   
   CGContextSetAllowsAntialiasing(context, FALSE);
@@ -331,7 +331,7 @@
                                                8,
                                                0,
                                                colorSpace,
-                                               kCGBitmapAlphaInfoMask & kCGImageAlphaPremultipliedFirst);
+                                               (CGBitmapInfo)kCGImageAlphaPremultipliedFirst);
   CGContextSetAllowsAntialiasing(context, FALSE);
   CGContextSetInterpolationQuality(context, kCGInterpolationNone);
   CGColorSpaceRelease(colorSpace);

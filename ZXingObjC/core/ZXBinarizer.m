@@ -82,7 +82,7 @@
                                                 8,      // bits per component
                                                 bytesPerRow,
                                                 gray,
-                                                kCGBitmapAlphaInfoMask & kCGImageAlphaNone);
+                                                kCGBitmapAlphaInfoMask & (CGBitmapInfo)kCGImageAlphaNone);
   CGColorSpaceRelease(gray);
 
   CGRect r = CGRectZero;
